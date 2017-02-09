@@ -1,8 +1,45 @@
+<!doctype html>
+
 <html>
 <head>
-	<title>Test Page</title>
+	<title>Come Together</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- import our CSS modules -->
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/introHCI.css" rel="stylesheet">
+	<!-- import our JS modules -->
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/introHCI.js"></script>
 </head>
+
 <body>
-Begin here (or replace this with any static code already written).
+	<div class="container">
+		<!-- Big block at the top of the page -->
+		<div class="jumbotron">
+			<h1>Come Together</h1>
+			<p>Insert description of platform</p>
+		</div>
+
+		<!-- Add buttons that allow you to toggle between different content on the home screen -->
+		<div class="contentButtons">
+			<button id="button_highlights" class="btn btn-primary btn-lg">Past Highlights</button>
+			<button id="button_trending" class="btn btn-primary btn-lg">Trending Projects</button>
+			<hr>
+			<hr>
+		</div>
+
+		<!-- Add the sample projects here -->
+		{{#each highlightProjects}}
+			<div class="highlightProject">
+				<img src="{{imageURL}}" class="img-responsive img-rounded">
+				<h3><a href="#" class="projectName">{{name}}</a></h3>
+				<p class="projectShortDesc">{{shortDescription}}</p>
+				<hr>
+			</div>
+		{{/each}}
+
 </body>
 </html>
