@@ -1,0 +1,31 @@
+body {
+	background-image: url(https://cdn3.iconfinder.com/data/icons/weather-and-forecast/51/Weather_icons_grey-03-512.png);
+	background-size: 25%;
+	background-color: #6EC8E7;
+	background-position: center;
+	font-family: 'Amiri', serif;
+	color: white;
+}
+
+.container {
+	align-items: center;
+	align-self: center;
+	image: url('https://s-media-cache-ak0.pinimg.com/564x/7f/90/bc/7f90bc34f911b2facc1455586523eeb5.jpg') center center;
+	border-radius: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 800px;
+	justify-content: center;
+	width: 800px;
+}
+
+html {
+	height: 100%;
+}
+
+
+hr {
+	width: 400px;
+	border-top: 1px solid white;
+
+}
