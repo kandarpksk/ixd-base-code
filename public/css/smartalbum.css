@@ -1,8 +1,22 @@
-header .container {
-  padding-top: 100px;
-  padding-bottom: 50px;
+.bottomButton {
+	position: fixed;
+	bottom: 0;
+	height: 5%;
+
 }
 
-.no-img {
-	padding-bottom: 50px;
+#voice {
+	position: fixed;
+	bottom: 0;
+	margin-bottom: 20px;
+}
+
+#share {
+	position: fixed;
+	bottom: 0;
+	margin-bottom: 20px;
+}
+
+.topPadding {
+	margin-top: 20px;
 }
