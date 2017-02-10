@@ -34,3 +34,10 @@
      width: 700px;
      max-width: 100%;
 }
+
+/* Use this to manipulate the start button */
+.start {
+     margin: auto;
+     width: %50;
+     
+}

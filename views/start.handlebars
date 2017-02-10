@@ -1,8 +1,8 @@
 <!doctype html>
-<!-- This is the page where the project is displayed -->
+
 <html>
 <head>
-	<title>Insert Project Name</title>
+	<title>Come Together</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- import our CSS modules -->
@@ -16,20 +16,20 @@
 </head>
 
 <body>
-	<!-- this is a comment in HTML -->
 	<div class="container">
 		<div class="jumbotron">
-				<h1>{{projectName}}</h1>
-				<p>{{projectShortDesc}}</p>
+			<h1>Start Screen</h1>
 		</div>
-		
-		<div class="project">
-			<img src="{{projectImgUrl}}" class="img-responsive img-rounded">
-			<p class="projectDesc">{{projectDesc}}</p>
+
+		<!-- Add buttons that allow you to toggle between different content on the home screen -->
+		<div class="contentButtons">
+			<button id="button_find" class="btn btn-primary btn-lg">Find Projects</button>
+			<hr>
+			<button id="button_create" class="btn btn-primary btn-lg">Create a Project</button>
 			<hr>
 		</div>
 
-
-	<p><a href="/">Back &raquo;</a></p>
+		<h4><a href="about/">About Us</a></h4>
+		<h4><a href="faq/">FAQ</a></h4>
+	</div>
 </body>
-</html>
