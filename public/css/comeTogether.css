@@ -14,6 +14,7 @@
 	background: none;
 }
 
+
 .jumbotron:after {
      content:"";
      background: url("/images/jumbotron_garden1.jpg");
@@ -25,6 +26,7 @@
      position: absolute;
      z-index: -1;	
 }
+
 
 .jumbotron p {
      color: #6e6e6e;

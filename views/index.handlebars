@@ -8,19 +8,15 @@
 	<!-- import our CSS modules -->
 	<link href="/css/bootstrap.css" rel="stylesheet">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/introHCI.css" rel="stylesheet">
-	<!-- import our JS modules -->
-	<script src="/js/bootstrap.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
-	<script src="/js/introHCI.js"></script>
+	<link href="/css/comeTogether.css" rel="stylesheet">
 </head>
 
 <body>
 	<div class="container">
 		<!-- Big block at the top of the page -->
-		<div class="jumbotron">
+		<div class="jumbotron text-center">
 			<h1>Come Together</h1>
-			<p>Insert description of platform</p>
+			<p>Insert clever description of platform</p>
 		</div>
 
 		<!-- Add buttons that allow you to toggle between different content on the home screen -->
@@ -32,7 +28,7 @@
 
 		<!-- Add the sample projects here -->
 		{{#each highlightProjects}}
-			<div class="project">
+			<div class="highlightProject">
 				<img src="{{imageURL}}" class="img-responsive img-rounded">
 				<h3><a href="project/{{name}}" class="projectName">{{name}}</a></h3>
 				<p class="projectShortDesc">{{shortDescription}}</p>
@@ -51,5 +47,9 @@
 			<p> </p>
 		</div>
 
+	<!-- load our scripts -->
+	<script src="/js/jquery-1.11.9.js"></script>
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/comeTogether.js"></script>
 </body>
 </html>
