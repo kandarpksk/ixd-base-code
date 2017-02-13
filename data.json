@@ -1,19 +1,19 @@
 {
 	"images": [
 		{
-			"imageURL": "img/20170212_140511.jpg",
+			"imageURL": "https://s3-us-west-1.amazonaws.com/smart-album/large/20170212_140511.jpg",
 			"tags": ["laptop", "coffee", "Andrew"]
 		},
 		{
-			"imageURL": "img/20170212_140513.jpg",
+			"imageURL": "https://s3-us-west-1.amazonaws.com/smart-album/20170212_140513.jpg",
 			"tags": ["laptop", "Chad"]
 		},
 		{
-			"imageURL": "img/20170212_140516.jpg",
+			"imageURL": "https://s3-us-west-1.amazonaws.com/smart-album/large/20170212_140516.jpg",
 			"tags": ["laptop"]
 		},
 		{
-			"imageURL": "img/20170212_140523.jpg",
+			"imageURL": "https://s3-us-west-1.amazonaws.com/smart-album/large/20170212_140523.jpg",
 			"tags": ["John"]
 		}
 	]
