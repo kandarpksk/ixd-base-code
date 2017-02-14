@@ -1,8 +1,85 @@
+<!doctype html>
+
 <html>
 <head>
-	<title>Test Page</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+    <title>Smart Album</title>
+
+	<link href="css/bootstrap.css" rel="stylesheet"></link>
+	<link href="css/bootstrap-theme" rel="stylesheet"></link>
+	<link href="css/smartalbum.css" rel="stylesheet"></link>
+	<link href="css/lightgallery.css" rel="stylesheet"></link>
 </head>
+
 <body>
-Begin here (or replace this with any static code already written).
-</body>
+	
+
+	
+	<div class="container">
+		<div class="row">
+			<div align="center" class="col-xs-4">
+
+				<button class="btn btn-default btn-lg topPadding">Filter</button>
+			</div>
+			<div class="col-xs-4">
+				<h2 align="center">Photos</h2>
+			</div>
+			<div align="center" class="col-xs-4">
+				<a href="upload">
+				<button type="button" class="btn btn-default btn-lg topPadding">Upload</button>
+				</a>
+			</div>
+		</div>
+	</div>	
+	
+
+	<!--<div class="container">
+		<div class="row">
+			{{#each images}}
+			<div class="col-xs-4 topPadding">
+				<img src={{imageURL}} class="img-responsive">
+			</div>
+			{{/each}}
+	    </div>
+	 </div>-->
+	 <div id="lightgallery">
+	 	{{#each images}}
+  		<a href={{imageURL}}>
+  			<div class="col-xs-4 topPadding">
+      		<img src={{imageURL}} class="img-responsive">
+      		</div>
+  		</a>
+  		{{/each}}
+	</div>
+
+	
+	<br>
+	<div class="container">
+		<div class="row">
+			<!--div class="btn-toolbar"-->
+				<!--div class="bottomButton"-->
+					<div align="center" class="col-xs-6">	
+						<button id="voice" type="button" class="btn btn-default btn-lg">Voice</button>
+					</div>
+					<div align="center" class="col-xs-6">
+						<button id="share" type="button" class="btn btn-default btn-lg">Share</button>
+					</div>
+				<!--/div-->
+			<!--/div-->			
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/lightgallery.min.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+    });
+	</script>
+
+	</body>
+
 </html>
