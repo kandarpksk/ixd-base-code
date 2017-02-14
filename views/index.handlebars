@@ -24,21 +24,29 @@
 		</div>
 
 		<!-- Add buttons that allow you to toggle between different content on the home screen -->
-		<div class="contentButtons">
+		<!--<div class="contentButtons">
 			<button id="button_highlights" class="btn btn-primary btn-lg">Past Highlights</button>
 			<button id="button_trending" class="btn btn-primary btn-lg">Trending Projects</button>
 			<hr>
-		</div>
-
+		</div>-->
+		<ul class="tab">
+  		<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'PastProject')" id = "defaultOpen">Past Highlights</a></li>
+  		<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Trending')">Trending Now</a></li>
+		</ul>
+	
 		<!-- Add the sample projects here -->
+		<div id="PastProject" class="tabcontent">
 		{{#each highlightProjects}}
-			<div class="project">
 				<img src="{{imageURL}}" class="img-responsive img-rounded">
 				<h3><a href="project/{{name}}" class="projectName">{{name}}</a></h3>
 				<p class="projectShortDesc">{{shortDescription}}</p>
 				<hr>
-			</div>
+			
 		{{/each}}
+		</div>
+		<div id="Trending" class="tabcontent">
+			<h3>hello</h3>
+		</div>
 
 		<!-- Add Start Your Journey Button -->
 		<div class="start">
@@ -50,6 +58,6 @@
 			<p> </p>
 			<p> </p>
 		</div>
-
+<script> document.getElementById("defaultOpen").click();</script>
 </body>
 </html>
