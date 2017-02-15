@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 	<!-- import our CSS modules -->
 	<link href="/css/bootstrap.css" rel="stylesheet">
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<!--link href="/css/bootstrap.min.css" rel="stylesheet"-->
 	<link href="/css/comeTogether.css" rel="stylesheet">
 </head>
 
@@ -15,14 +15,15 @@
 	<header class="container">
 		<h2>Header</h2>
 		<!-- Add Navbar component to display navigation items -->
-		<nav class="navbar navbar-inverse container-fluid navbar-fixed-top">
-			<div>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<!-- If on a mobile device, it will be a button
 					If on a desktop, it will be a bar at the top -->
 				<div class="navbar-header">
+
 					<!-- Add a navbar button that is by default collapsed -->
-					<button type="button" class="navbar-toggle colapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -35,22 +36,27 @@
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
 						<li class="active">
-							<a href="index.handlebars">
-								<span class="glyphicon glyphicon-home"></span>
-								Home
-							</a>
+							<a href="index.handlebars"><span class="glyphicon glyphicon-home"></span>Home</a>
 						</li>
 						<li>
-							<a href="#">
-								<span class="glyphicon glyphicon-asterisk"></span>
-								About Us
-							</a>
+							<a href="#"><span class="glyphicon glyphicon-asterisk"></span>About Us</a>
 						</li>
 					</ul>
 
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a>
+						</li>
+
+						<li>
+							<a href="#"><span class="glyphicon glyphicon-user"></span>Register</a>
+						</li>
+					</ul>
+
+
 					<!-- Add the search bar to the navbar -->
 					<form class="navbar-form" role="search">
-						<div class="form-group-sm">
+						<div class="form-group-sm" id="mySearchBar">
 							<div class="input-group">
 								<input type="text" class="form-control" placeholder="Search Projects">
 								<span class="input-group-btn">
@@ -60,22 +66,6 @@
 						</div>
 					</form>
 
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a href="#">
-								<span class="glyphicon glyphicon-log-in"></span>
-								Login
-							</a>
-						<li>
-
-						<li>
-							<a href="#">
-								<span class="glyphicon glyphicon-user"></span>
-								Register
-							</a>
-						<li>
-					</ul>
-
 				</div>
 			</div>
 		</nav>
@@ -83,7 +73,7 @@
 	</header>
 
 	<!-- bar right under the header -->
-	<section class="container">
+	<section class="container-fluid">
 		<div class="row">
 			<div class="col-sm-3 leftNav">
 				Left Navigation

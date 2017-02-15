@@ -43,3 +43,12 @@
      width: %50;
      
 }
+
+#mySearchBar {
+     display: block;
+     margin-left: 350px;
+     margin-right: 350px; 
+     min-width: 300px;
+
+     /*margin-right: 200px auto;*/
+}
