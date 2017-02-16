@@ -46,9 +46,11 @@
 
 #mySearchBar {
      display: block;
-     margin-left: 350px;
-     margin-right: 350px; 
-     min-width: 300px;
+     /*margin-left: 350px;
+     margin-right: 350px; */
+     /*max-width: 800px;*/
+     /*min-width: 300px;*/
+
 
      /*margin-right: 200px auto;*/
 }
