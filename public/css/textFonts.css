@@ -1,0 +1,31 @@
+/* Everything related to the text and font format across the app*/
+
+/* Project Name in Highlights or Trending Section */
+.projectName {
+     color:#008000;
+     font-size: 16px !important;
+     letter-spacing: 1px;
+     font-family: Montserrat, sans-serif;
+}
+
+/* Highlights or Trending Tabs */
+.tablinks {
+	color:#008000 !important;
+    font-size: 16px !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: Montserrat, sans-serif;
+}
+
+/* All of the items in the navbar */
+.navbar {
+     margin-bottom: 0;
+     background-color: #008000;
+     z-index: 9999;
+     border: 0;
+     font-size: 12px !important;
+     line-height: 1.42857143 !important;
+     letter-spacing: 4px;
+     border-radius: 0;
+     font-family: Montserrat, sans-serif;
+}

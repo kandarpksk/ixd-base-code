@@ -9,90 +9,127 @@
 	<link href="/css/bootstrap.css" rel="stylesheet">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/comeTogether.css" rel="stylesheet">
-</head>
-
-<body>
-	<header class="container">
-		<h2>Header</h2>
-		<!-- Add Navbar component to display navigation items -->
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<!-- If on a mobile device, it will be a button
-					If on a desktop, it will be a bar at the top -->
-				<div class="navbar-header">
-
-					<!-- Add a navbar button that is by default collapsed -->
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="http://google.com">App Title w/link</a>
-				</div>
-
-				<!-- Add options to the navbar through list -->
-				<div class="collapse navbar-collapse" id="myNavbar">
-					<ul class="nav navbar-nav">
-						<li class="active">
-							<a href="index.handlebars"><span class="glyphicon glyphicon-home"></span> Home</a>
-						</li>
-						<li>
-							<a href="#"><span class="glyphicon glyphicon-asterisk"></span> About Us</a>
-						</li>
-					</ul>
-
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
-						</li>
-
-						<li>
-							<a href="#"><span class="glyphicon glyphicon-user"></span> Register</a>
-						</li>
-					</ul>
-
-					<!-- Add the search bar to the navbar -->
-					<form class="navbar-form" role="search">
-						<div class="form-group-sm" id="mySearchBar">
-							<div class="input-group">
-								<input type="text" class="form-control" placeholder="Search Projects">
-								<span class="input-group-btn">
-									<button class="btn btn-success btn-sm">Search!</button>
-								</span>
-							</div>
-						</div>
-					</form>
-
-				</div>
-			</div>
-		</nav>
-
-	</header>
-
-	<!-- bar right under the header -->
-	<section class="container-fluid">
-		<div class="row">
-			<div class="col-sm-3 leftNav">
-				Left Navigation
-			</div>
-			<div class="col-sm-6 content">
-				Content Area
-			</div>
-			<div class="col-sm-3 relatedContent">
-				Related content
-			</div>
-		</div>
-	</section>
-
-	<footer class="container">
-		<h2>Footer</h2>
-	</footer>
-
+	<link href="/css/navbar.css" rel="stylesheet">
+	<link href="/css/textFonts.css" rel="stylesheet">
 	<!-- load our scripts -->
 	<script src="/js/jquery-3.1.1.js"></script>
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/comeTogether.js"></script>
+</head>
+
+<body>
+	<!-- ********************HEADER IMPORT******************** -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<!-- If on a mobile device, it will be a button
+				If on a desktop, it will be a bar at the top -->
+			<div class="navbar-header">
+
+				<!-- Add a navbar button that is by default collapsed -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarButton">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">Come Together</a>
+			</div>
+
+			<!-- Add options to the navbar through list -->
+			<div class="collapse navbar-collapse" id="navbarButton">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="#"><span class="glyphicon glyphicon-globe"></span> Discover</a>
+					</li>
+					<li>
+						<a href="#"><span class="glyphicon glyphicon-leaf"></span> Create a Project</a>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+					</li>
+
+					<li>
+						<a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a>
+					</li>
+					<li>
+						<a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a>
+					</li>
+				</ul>
+
+				<!-- Add the search bar to the navbar -->
+				<form class="navbar-form" role="search">
+					<div class="form-group-sm" id="mySearchBar">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search Projects">
+							<span class="input-group-btn">
+								<button class="btn btn-success btn-sm">Search!</button>
+							</span>
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</nav>
+	<p style="margin-bottom:55px;"/></p>
+	<!-- /********************HEADER IMPORT******************** -->
+
+	<div class="container">
+		<!-- Allow you to toggle between different content on the home screen -->
+		<ul class="tab">
+	  		<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'PastProject')" id = "defaultOpen">Past Highlights</a></li>
+	  		<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Trending')">Trending Now</a></li>
+		</ul>
+	</div>
+
+	<!-- Add the sample projects here -->
+	<div id="PastProject" class="tabcontent">
+	{{#each highlightProjects}}
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-7" align="right">
+					<img src="{{imageURL}}" class="img-responsive img-rounded">				
+				</div>
+				<div class="col-xs-5">
+					<h4><a href="project/{{name}}" class="projectName">{{name}}</a></h4>
+					<p class="projectShortDesc">{{shortDescription}}</p>
+				</div>
+			</div>
+			<p style="margin-bottom:40px;"/></p>
+		</div>
+	{{/each}}
+	</div>
+
+	<div id="Trending" class="tabcontent">
+	{{#each trendingProjects}}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-7" align="right">
+				<img src="{{imageURL}}" class="img-responsive img-rounded">				
+			</div>
+			<div class="col-xs-5">
+				<h4><a href="project/{{name}}" class="projectName">{{name}}</a></h4>
+				<p class="projectShortDesc">{{shortDescription}}</p>
+			</div>
+		</div>
+		<p style="margin-bottom:40px;"/></p>
+	</div>
+	{{/each}}
+	</div>
+
+	<!-- Add Start Your Journey Button -->
+	<div class="start">
+		<hr>
+		<!-- button id="button_start" class="btn btn-primary btn-lg">Start Your Journey</button -->
+		<!-- Make it a hyperlink for now, MUST CHANGE -->
+		<h2><a href="start/">Start Your Journey</a></h2>
+		<p style="margin-bottom:55px;"/></p>
+	</div>
+
+<script> document.getElementById("defaultOpen").click();</script>
 </body>
 </html>
