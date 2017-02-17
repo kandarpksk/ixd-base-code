@@ -1,6 +1,6 @@
-
-/*
- * GET home page.
+/* 
+ * Server-side JS module 
+ * Currently loads the projectData.json file into index.handlebars.
  */
 
 // Get all of our project data

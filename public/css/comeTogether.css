@@ -1,3 +1,7 @@
+/* 
+ * CSS module used for the changing general things across the app. 
+ */
+
 /* applies to anything of class "example-class-selector" */
 .example-class-selector {
 	margin-top: 2em;
@@ -14,6 +18,7 @@
 	background: none;
 }
 
+
 .jumbotron:after {
      content:"";
      background: url("/images/jumbotron_garden1.jpg");
@@ -26,21 +31,25 @@
      z-index: -1;	
 }
 
+
 .jumbotron p {
      color: #6e6e6e;
-}
-
-.highlightProject {
-     width: 700px;
-     max-width: 100%;
 }
 
 /* Use this to manipulate the start button */
 .start {
      margin: auto;
-     width: %50;
+     width: %20;
      
 }
+
+
+body {
+   /*background-color: #E9FFE6; */
+   background-color: #F0FEFF; 
+}
+
+/***** Josh's Tab Code *****/
 /* Style the list */
 ul.tab {
     list-style-type: none;

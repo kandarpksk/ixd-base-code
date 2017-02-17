@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -11,7 +10,9 @@ var handlebars = require('express3-handlebars')
 var index = require('./routes/index');
 var project = require('./routes/project');
 var start = require('./routes/start');
+var login = require('./routes/login');
 var find = require('./routes/find');
+
 // Example route
 // var user = require('./routes/user');
 
@@ -31,7 +32,7 @@ app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
-
+	
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -42,7 +43,9 @@ app.get('/', index.view);
 app.get('/project', project.viewProject);
 app.get('/project/:name', project.viewProject);
 app.get('/start', start.view);
+app.get('/login', login.view);
 app.get('/find', find.view);
+
 // Example route
 // app.get('/users', user.list);
 

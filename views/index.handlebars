@@ -1,63 +1,80 @@
 <!doctype html>
-
+<!-- Home Page -->
 <html>
 <head>
 	<title>Come Together</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- import our CSS modules -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+	<!-- import CSS modules -->
 	<link href="/css/bootstrap.css" rel="stylesheet">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/introHCI.css" rel="stylesheet">
-	<!-- import our JS modules -->
-	<script src="/js/bootstrap.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
-	<script src="/js/introHCI.js"></script>
+	<link href="/css/comeTogether.css" rel="stylesheet">
+	<link href="/css/textFonts.css" rel="stylesheet">
 </head>
 
 <body>
+	<!-- load header -->
+	<div id="header"></div>
+
 	<div class="container">
-		<!-- Big block at the top of the page -->
-		<div class="jumbotron">
-			<h1>Come Together</h1>
-			<p>Insert description of platform</p>
-		</div>
-
-		<!-- Add buttons that allow you to toggle between different content on the home screen -->
-		<!--<div class="contentButtons">
-			<button id="button_highlights" class="btn btn-primary btn-lg">Past Highlights</button>
-			<button id="button_trending" class="btn btn-primary btn-lg">Trending Projects</button>
-			<hr>
-		</div>-->
+		<!-- Allow you to toggle between different content on the home screen -->
 		<ul class="tab">
-  		<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'PastProject')" id = "defaultOpen">Past Highlights</a></li>
-  		<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Trending')">Trending Now</a></li>
+	  		<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'PastProject')" id = "defaultOpen">Past Highlights</a></li>
+	  		<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Trending')">Trending Now</a></li>
 		</ul>
-	
-		<!-- Add the sample projects here -->
-		<div id="PastProject" class="tabcontent">
-		{{#each highlightProjects}}
-				<img src="{{imageURL}}" class="img-responsive img-rounded">
-				<h3><a href="project/{{name}}" class="projectName">{{name}}</a></h3>
-				<p class="projectShortDesc">{{shortDescription}}</p>
-				<hr>
-			
-		{{/each}}
-		</div>
-		<div id="Trending" class="tabcontent">
-			<h3>hello</h3>
-		</div>
+	</div>
 
-		<!-- Add Start Your Journey Button -->
-		<div class="start">
-			<hr>
-			<!-- button id="button_start" class="btn btn-primary btn-lg">Start Your Journey</button -->
-			<!-- Make it a hyperlink for now, MUST CHANGE -->
-			<h2><a href="start/">Start Your Journey</a></h2>
-			<p> </p>
-			<p> </p>
-			<p> </p>
+	<!-- Add the sample projects here -->
+	<div id="PastProject" class="tabcontent">
+	{{#each highlightProjects}}
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-7" align="right">
+					<img src="{{imageURL}}" class="img-responsive img-rounded">				
+				</div>
+				<div class="col-xs-5">
+					<h4><a href="project/{{name}}" class="projectName">{{name}}</a></h4>
+					<p class="projectShortDesc">{{shortDescription}}</p>
+				</div>
+			</div>
+			<p style="margin-bottom:40px;"/></p>
 		</div>
-<script> document.getElementById("defaultOpen").click();</script>
+	{{/each}}
+	</div>
+
+	<div id="Trending" class="tabcontent">
+	{{#each trendingProjects}}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-7" align="right">
+				<img src="{{imageURL}}" class="img-responsive img-rounded">				
+			</div>
+			<div class="col-xs-5">
+				<h4><a href="project/{{name}}" class="projectName">{{name}}</a></h4>
+				<p class="projectShortDesc">{{shortDescription}}</p>
+			</div>
+		</div>
+		<p style="margin-bottom:40px;"/></p>
+	</div>
+	{{/each}}
+	</div>
+
+	<!-- Add Start Your Journey Button -->
+	<div class="start">
+		<hr>
+		<!-- button id="button_start" class="btn btn-primary btn-lg">Start Your Journey</button -->
+		<!-- Make it a hyperlink for now, MUST CHANGE -->
+		<h2><a href="start/">Start Your Journey</a></h2>
+		<p style="margin-bottom:55px;"/></p>
+	</div>
+
+	<!-- load JS scripts -->
+	<script src="/js/jquery-3.1.1.js"></script>
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/comeTogether.js"></script>
+	<script> document.getElementById("defaultOpen").click();</script>
+	<!-- load header using script-->
+	<script> $(function() {$("#header").load("/header.html")} ); </script>
+
 </body>
 </html>

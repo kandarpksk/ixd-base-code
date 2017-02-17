@@ -1,0 +1,25 @@
+/* 
+ * CSS module used for the changing the text and font format across the app. 
+ */
+
+/* Project Name in Highlights or Trending Section */
+.projectName {
+     color:#008000;
+     font-size: 16px !important;
+     letter-spacing: 1px;
+     font-family: Montserrat, sans-serif;
+}
+
+/* Highlights or Trending Tabs */
+.tablinks {
+	color:#008000 !important;
+    font-size: 16px !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: Montserrat, sans-serif;
+}
+
+/* Adjust the text in the login screen */
+.login-text {
+    font-family: Montserrat, sans-serif;
+}
