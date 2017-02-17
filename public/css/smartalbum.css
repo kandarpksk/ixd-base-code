@@ -17,6 +17,18 @@
 	margin-bottom: 20px;
 }
 
+
 .topPadding {
 	margin-top: 20px;
+}
+
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.permissions-btn:focus {
+	background: #3DFF51;
 }
