@@ -25,11 +25,69 @@ function filterImages(e) {
 
 // add or remove classes to show/hide the images
 function hideOrShowItems(itemType, classToRemove, classToAdd) {
-	for (var i = 0; i < imagesToFilter.length; i++) {
+	var i, j, k;
+	var flag;
+	var nextImageFlag;
+	for (i = 0; i < imagesToFilter.length; i++) {
 		var currentItem = imagesToFilter[i];
 
+		// look at all tags of image, tags are of Object String
+		var imageTagsString = currentItem.getAttribute("data-type");
+		console.log(Object.prototype.toString.call(imageTagsString));
+		var imageTags = imageTagsString.split(",");
+		console.log(Object.prototype.toString.call(imageTags));
+		console.log("Image " + i + "Tags : " + imageTags);
+		for (j = 0; j < imageTags.length; j++) {
+		   // if tag matches the checkboxed value ignore
+		   console.log("Iterating on Tag : " + imageTags[j]);
+		   if (imageTags[j] == itemType) {
+		      // if tag is only tag on image then hide/show
+		      if (imageTags.length == 1) {
+		         // set flag = true to hide/show
+			 console.log("True, hide/show");
+			 flag = true;
+		      }
+		      else {
+		         console.log("continuing on tag" + imageTags[j]);
+		         continue;
+		      }
+		   }
+		   else {
+ 		      // check if the tag is checked in any other checkbox
+		      //console.log("Num Checkboxes : " + checkBoxes.length);
+		      for (k = 0; k < checkBoxes.length; k++) {
+		         // if box is checked with an image tag don't hide/show
+			 // and just break onto next image
+			 if (checkBoxes[k].getAttribute("data-type") ==
+					 imageTags[j] && checkBoxes[k].checked
+					 == true) {
+			    console.log("Other filter is applied! Filter : " +
+					    checkBoxes[k].getAttribute("data-type") + ". Image Tags : " +
+					    imageTags[j]);
+			    flag = false;
+			    // if satisfied by another filter use flag
+			    // to break out into next image
+			    nextImageFlag = true;
+			    break;
+			 }
+			 else {
+		            // if no other checkbox filter tag matches image
+			    console.log("No other tags match filter! Hide/show!");
+			    flag = true;
+			 }
+		      }
+		   }
+		   // break out of looping through other tags and into next
+		   // image. reset flag for next loops
+		   if (nextImageFlag) {
+		      nextImageFlag = false;
+		      break;
+		   }
+		}
+
 		// indexOf checks if the images tag(s) contain tag(s)
-		if (currentItem.getAttribute("data-type").indexOf(itemType) >= 0) {
+		if (currentItem.getAttribute("data-type").indexOf(itemType) >= 0
+				&& flag == true) {
 			console.log("show/hide");
 			console.log(currentItem.getAttribute("data-type"));
 			removeClass(currentItem, classToRemove);
