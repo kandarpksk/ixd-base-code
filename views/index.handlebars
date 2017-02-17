@@ -78,16 +78,19 @@
 			{{/each}}
 	    </div>
 	 </div>-->
-	 <div id="lightgallery">
+	 <div class="container">
+	 <div class="row" id="lightgallery">
 	 	{{#each images}}
- 		
-		<a href={{imageURL}}>
-  			<div class="col-xs-4 topPadding imagesToFilter" data-type="{{tags}}">
+	 	<!--TODO: Make the caption for the tags look nicer-->
+  		<a href={{imageURL}} data-sub-html={{tags}}>
+  			<div class="col-xs-4 topPadding imagesToFilter"
+			data-type="{{tags}}">
       		<img src={{imageURL}} class="img-responsive">
       		</div>
   		</a>
 	  	
   		{{/each}}
+	</div>
 	</div>
 
 	
