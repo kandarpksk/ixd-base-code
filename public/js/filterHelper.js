@@ -27,6 +27,7 @@ function filterImages(e) {
 function hideOrShowItems(itemType, classToRemove, classToAdd) {
 	var i, j, k;
 	var flag;
+	var nextImageFlag;
 	for (i = 0; i < imagesToFilter.length; i++) {
 		var currentItem = imagesToFilter[i];
 
@@ -64,13 +65,23 @@ function hideOrShowItems(itemType, classToRemove, classToAdd) {
 					    checkBoxes[k].getAttribute("data-type") + ". Image Tags : " +
 					    imageTags[j]);
 			    flag = false;
+			    // if satisfied by another filter use flag
+			    // to break out into next image
+			    nextImageFlag = true;
 			    break;
 			 }
 			 else {
 		            // if no other checkbox filter tag matches image
+			    console.log("No other tags match filter! Hide/show!");
 			    flag = true;
 			 }
 		      }
+		   }
+		   // break out of looping through other tags and into next
+		   // image. reset flag for next loops
+		   if (nextImageFlag) {
+		      nextImageFlag = false;
+		      break;
 		   }
 		}
 

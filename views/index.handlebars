@@ -9,7 +9,7 @@
     <title>Smart Album</title>
 
 	<link href="css/bootstrap.css" rel="stylesheet"></link>
-	<link href="css/bootstrap-theme" rel="stylesheet"></link>
+	<link href="css/bootstrap-theme.css" rel="stylesheet"></link>
 	<link href="css/smartalbum.css" rel="stylesheet"></link>
 	<link href="css/lightgallery.css" rel="stylesheet"></link>
 </head>
@@ -114,22 +114,20 @@
 	</div>
 
 	<!-- Filter Dropdown -->
-	
+
 
 	<!-- Filter Modal -->
 	<div id="filterModal" class="modal fade">
 	   <div class="modal-content">
 	      <div class="modal-body">
-	      	 <p>Shows images with selected tags!</p>
-		 {{#each images}}
-		 {{#each tags}}
+	      	 <p>Shows images at least one of the selected tags!</p>
+		 {{#each uniqueTags}}
 		 <!-- filtering indiviual tag elements need logic work -->
 	         <div class="checkbox">
 		    <label>
 		    <input type="checkbox" value="{{this}}"
 		    data-type="{{this}}">{{this}}</label>
 		 </div>
-		 {{/each}}
 		 {{/each}}
 	      </div>
 	      <!--div align="center" class="modal-footer">
