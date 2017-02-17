@@ -1,3 +1,7 @@
+/* 
+ * CSS module used for the changing general things across the app. 
+ */
+
 /* applies to anything of class "example-class-selector" */
 .example-class-selector {
 	margin-top: 2em;
@@ -39,6 +43,11 @@
      
 }
 
+
+body {
+   /*background-color: #E9FFE6; */
+   background-color: #F0FEFF; 
+}
 
 /***** Josh's Tab Code *****/
 /* Style the list */

@@ -1,4 +1,19 @@
-/* Everything related to the navbar format across the app */
+/* 
+ * CSS module used for the changing navbar format across the app. 
+ */
+
+ /* All of the items in the navbar */
+.navbar {
+     margin-bottom: 0;
+     background-color: #008000;
+     z-index: 9999;
+     border: 0;
+     font-size: 12px !important;
+     line-height: 1.42857143 !important;
+     letter-spacing: 4px;
+     border-radius: 0;
+     font-family: Montserrat, sans-serif;
+}
 
 .navbar li a, .navbar .navbar-brand {
      color: #fff !important;

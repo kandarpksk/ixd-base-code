@@ -1,66 +1,86 @@
 <!doctype html>
+<!-- Login Page -->
 <html>
 <head>
   <title>Come Together</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-  <!-- import our CSS modules -->
+  <!-- import CSS modules -->
   <link href="/css/bootstrap.css" rel="stylesheet">
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/comeTogether.css" rel="stylesheet">
-  <link href="/css/navbar.css" rel="stylesheet">
   <link href="/css/textFonts.css" rel="stylesheet">
   <link href="/css/login.css" rel="stylesheet">
-  <!-- load our scripts -->
-  <script src="/js/jquery-3.1.1.js"></script>
-  <script src="/js/bootstrap.js"></script>
-  <script src="/js/comeTogether.js"></script>
+  <link href="/css/navbar.css" rel="stylesheet">
 </head>
 
 <body>
-<div class="container login-custom">
-  <div class="row">
-
-    <div class="main">
-
-      <h3>Welcome to Come Together!</h3>
-      <h3>Please Log In, or <a href="#">Sign Up</a></h3>
-
-      <form role="form">
-        <div class="form-group">
-          <label for="inputUsernameEmail">Username or email</label>
-          <input type="text" class="form-control" id="inputUsernameEmail">
+  <!-- load DUMMY header -->
+  <div id="dummyHeader">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarButton">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Come Together</a>
         </div>
-        <div class="form-group">
-          <a class="pull-right" href="#">Forgot password?</a>
-          <label for="inputPassword">Password</label>
-          <input type="password" class="form-control" id="inputPassword">
-        </div>
-        <div class="checkbox pull-right">
-          <label>
-            <input type="checkbox">
-            Remember me </label>
-        </div>
-        <button type="submit" class="btn btn btn-primary">
-          Log In
-        </button>
-      </form>
-
-      <div class="login-or">
-        <hr class="hr-or">
-        <span class="span-or">or</span>
       </div>
-
-      <div class="row">
-        <a href="/" class="btn btn-lg btn-primary btn-block">Login with Facebook</a>
-      </div>
-      <p></p>
-      <div class="row">
-        <a href="/" class="btn btn-lg btn-info btn-block">Login with Google+</a>
-      </div>
-    
-    </div> 
+    </nav>
+    <p style="margin-bottom:55px;"/></p>
   </div>
-</div>
+
+  <!-- Build the rest of the login page -->
+  <div class="container login-custom">
+    <div class="row">
+      <div class="main">
+        <h3>Welcome to Come Together!</h3>
+        <h3>Please Log In, or <a href="#">Sign Up</a></h3>
+
+        <form role="form">
+          <div class="form-group">
+            <label for="inputUsernameEmail">Username or email</label>
+            <input type="text" class="form-control" id="inputUsernameEmail">
+          </div>
+          <div class="form-group">
+            <a class="pull-right" href="#">Forgot password?</a>
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="inputPassword">
+          </div>
+          <div class="checkbox pull-right">
+            <label>
+              <input type="checkbox">
+              Remember me </label>
+          </div>
+          <button type="submit" class="btn btn btn-primary">
+            Log In
+          </button>
+        </form>
+
+        <div class="login-or">
+          <hr class="hr-or">
+          <span class="span-or">or</span>
+        </div>
+
+        <div class="row">
+          <a href="/" class="btn btn-lg btn-primary btn-block">Login with Facebook</a>
+        </div>
+        <p></p>
+        <div class="row">
+          <a href="/" class="btn btn-lg btn-info btn-block">Login with Google+</a>
+        </div>
+      
+      </div> 
+    </div>
+  </div>
+
+  <!-- load JS scripts -->
+  <script src="/js/jquery-3.1.1.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/comeTogether.js"></script>
+
 </body>
 </html>

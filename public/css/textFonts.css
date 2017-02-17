@@ -1,4 +1,6 @@
-/* Everything related to the text and font format across the app*/
+/* 
+ * CSS module used for the changing the text and font format across the app. 
+ */
 
 /* Project Name in Highlights or Trending Section */
 .projectName {
@@ -17,15 +19,7 @@
     font-family: Montserrat, sans-serif;
 }
 
-/* All of the items in the navbar */
-.navbar {
-     margin-bottom: 0;
-     background-color: #008000;
-     z-index: 9999;
-     border: 0;
-     font-size: 12px !important;
-     line-height: 1.42857143 !important;
-     letter-spacing: 4px;
-     border-radius: 0;
-     font-family: Montserrat, sans-serif;
+/* Adjust the text in the login screen */
+.login-text {
+    font-family: Montserrat, sans-serif;
 }

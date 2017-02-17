@@ -1,3 +1,9 @@
+/* 
+ * Server-side JS module 
+ * Currently loads the projectData.json file and finds the correct project and
+ *   renders its data in a new page.
+ */
+
 // Get all of our project data
 var projectData = require('../projectData.json');
 

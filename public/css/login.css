@@ -1,42 +1,54 @@
-  body {
-    padding-top: 15px;
-    font-size: 12px
-  }
+/* 
+ * CSS module used for the changing login screen format. 
+ */
 
-  .main {
-    max-width: 320px;
-    margin: 0 auto;
-  }
+body {
+  padding-top: 15px;
+  font-size: 12px
+}
 
-  .login-or {
-    position: relative;
-    font-size: 18px;
-    color: #aaa;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+.main {
+  max-width: 320px;
+  margin: 0 auto;
+}
 
-  .span-or {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: -2px;
-    margin-left: -25px;
-    background-color: #fff;
-    width: 50px;
-    text-align: center;
-  }
+.login-or {
+  position: relative;
+  font-size: 18px;
+  color: #aaa;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
-  .hr-or {
-    background-color: #cdcdcd;
-    height: 1px;
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-  }
+.span-or {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  margin-left: -25px;
+  background-color: #fff;
+  width: 50px;
+  text-align: center;
+}
 
-  h3 {
-    text-align: center;
-    line-height: 300%;
-  }
+.hr-or {
+  background-color: #cdcdcd;
+  height: 1px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+h3 {
+  text-align: center;
+  line-height: 300%;
+}
+
+/* Manipulate the login box */
+.login-custom {
+  border-radius: 25px;
+  /*background: #73AD21;*/
+  padding: 20px;
+  width: 400px;
+}
