@@ -16,5 +16,6 @@
 			"imageURL": "https://s3-us-west-1.amazonaws.com/smart-album/large/20170212_140523.jpg",
 			"tags": ["John"]
 		}
-	]
+	],
+	"uniqueTags":["laptop","coffee","Andrew","Chad","John"]
 }
