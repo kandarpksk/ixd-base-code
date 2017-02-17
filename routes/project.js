@@ -5,22 +5,39 @@
  */
 
 // Get all of our project data
+console.log("Loading Project.js");
 var projectData = require('../projectData.json');
+console.log("Successfully loaded Project.js");
 
-exports.viewProject = function(req, res) {
+exports.viewHighlights = function(req, res) {
+	console.log("Rendering Highlights");
+	/* This gets passed in through req from caller */
+	var projID = req.params.id; 
+
 	/* Find and return the correct object */
-	var name = req.params.name;
-	var objIndex;
-	if (name == "Amazing Park Playground") {
-		objIndex = 0;
-	}
-	else {
-		objIndex = 1;
-	}
+	var name = projectData['highlightProjects'][projID]['name'];
+	var imageURL = projectData['highlightProjects'][projID]['imageURL'];
+	var shortDesc = projectData['highlightProjects'][projID]['shortDescription'];
+	var desc = projectData['highlightProjects'][projID]['description'];
 
-	var imageURL = projectData['highlightProjects'][objIndex]['imageURL']
-	var shortDesc = projectData['highlightProjects'][objIndex]['shortDescription']
-	var desc = projectData['highlightProjects'][objIndex]['description']
+	res.render('project', {
+		'projectName': name,
+		'projectImgUrl': imageURL,
+		'projectShortDesc': shortDesc,
+		'projectDesc': desc
+	});
+};
+
+exports.viewTrending = function(req, res) {
+	console.log("Rendering Trending");
+	/* This gets passed in through req from caller */
+	var projID = req.params.id; 
+
+	/* Find and return the correct object */
+	var name = projectData['trendingProjects'][projID]['name'];
+	var imageURL = projectData['trendingProjects'][projID]['imageURL'];
+	var shortDesc = projectData['trendingProjects'][projID]['shortDescription'];
+	var desc = projectData['trendingProjects'][projID]['description'];
 
 	res.render('project', {
 		'projectName': name,

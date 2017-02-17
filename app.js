@@ -40,8 +40,8 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/project', project.viewProject);
-app.get('/project/:name', project.viewProject);
+app.get('/project/highlights/:id', project.viewHighlights);
+app.get('/project/trending/:id', project.viewTrending);
 app.get('/start', start.view);
 app.get('/login', login.view);
 app.get('/find', find.view);
