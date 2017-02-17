@@ -122,12 +122,14 @@
 	      <div class="modal-body">
 	      	 <p>Shows images with selected tags!</p>
 		 {{#each images}}
+		 {{#each tags}}
 		 <!-- filtering indiviual tag elements need logic work -->
 	         <div class="checkbox">
 		    <label>
-		    <input type="checkbox" value="{{tags}}"
-		    data-type="{{tags}}">{{tags}}</label>
+		    <input type="checkbox" value="{{this}}"
+		    data-type="{{this}}">{{this}}</label>
 		 </div>
+		 {{/each}}
 		 {{/each}}
 	      </div>
 	      <!--div align="center" class="modal-footer">
