@@ -20,3 +20,23 @@
 .topPadding {
 	margin-top: 20px;
 }
+
+#shareModal {
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#filterModal {
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.showItem {
+	display: list-item;
+}
+
+.hideItem {
+	display: none;
+}
