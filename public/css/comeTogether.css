@@ -21,7 +21,6 @@
 
 .jumbotron:after {
      content:"";
-     background: url("/images/jumbotron_garden1.jpg");
      opacity: 0.35;
      top: 0;
      left: 0;

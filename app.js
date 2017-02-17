@@ -9,7 +9,6 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var project = require('./routes/project');
-var start = require('./routes/start');
 var login = require('./routes/login');
 var find = require('./routes/find');
 
@@ -42,7 +41,6 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/project/highlights/:id', project.viewHighlights);
 app.get('/project/trending/:id', project.viewTrending);
-app.get('/start', start.view);
 app.get('/login', login.view);
 app.get('/find', find.view);
 
