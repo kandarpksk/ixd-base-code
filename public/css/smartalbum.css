@@ -2,7 +2,6 @@
 	position: fixed;
 	bottom: 0;
 	height: 5%;
-
 }
 
 #voice {
@@ -22,6 +21,7 @@
 	margin-top: 20px;
 }
 
+
 .vertical-center {
   min-height: 100%;
   min-height: 100vh;
@@ -31,4 +31,24 @@
 
 .permissions-btn:focus {
 	background: #3DFF51;
+}
+
+#shareModal {
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#filterModal {
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.showItem {
+	display: list-item;
+}
+
+.hideItem {
+	display: none;
 }

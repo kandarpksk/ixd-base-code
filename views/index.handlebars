@@ -22,7 +22,40 @@
 		<div class="row">
 			<div align="center" class="col-xs-4">
 
-				<button class="btn btn-default btn-lg topPadding">Filter</button>
+				<button class="btn btn-default btn-lg
+				topPadding" data-toggle="modal"
+				data-target="#filterModal">Filter</button>
+		            
+			     <!-- Filter Dropdown button with checkboxes -->
+				<!--div class="button-group">
+				<div align="left" class="dropdown">
+				   <button class="btn btn-default btn-lg
+				   dropdown-toggle topPadding" type="button"
+				   data-toggle="dropdown">Filter<span
+				   class="caret"></span></button>
+				   <ul class="dropdown-menu">
+				      
+				      {{#each images}}
+				         {{#each tags}}
+				      <li><a href="#" class="small"
+				      data-value="{{this}}"><input
+				      type="checkbox">&nbsp;{{this}}</a></li>
+				         {{/each}}
+                                      {{/each}}
+				      <li><a href="#" class="small"
+				      data-value="laptop"><input
+				      type="checkbox">&nbsp;laptop</a></li>
+				      <li><a href="#" class="small"
+				      data-value="Friend: Chad"><input
+				      type="checkbox">&nbsp;Friend: Chad</a></li>
+				      <li><a href="#" class="small"
+				      data-value="Friend: John"><input
+				      type="checkbox">&nbsp;Friend: John</a></li>
+				   </ul>
+				</div>
+			     </div-->
+			     
+
 			</div>
 			<div class="col-xs-4">
 				<h2 align="center">Photos</h2>
@@ -45,14 +78,19 @@
 			{{/each}}
 	    </div>
 	 </div>-->
-	 <div id="lightgallery">
+	 <div class="container">
+	 <div class="row" id="lightgallery">
 	 	{{#each images}}
-  		<a href={{imageURL}}>
-  			<div class="col-xs-4 topPadding">
+	 	<!--TODO: Make the caption for the tags look nicer-->
+  		<a href={{imageURL}} data-sub-html={{tags}}>
+  			<div class="col-xs-4 topPadding imagesToFilter"
+			data-type="{{tags}}">
       		<img src={{imageURL}} class="img-responsive">
       		</div>
   		</a>
+	  	
   		{{/each}}
+	</div>
 	</div>
 
 	
@@ -65,12 +103,68 @@
 						<button id="voice" type="button" class="btn btn-default btn-lg">Voice</button>
 					</div>
 					<div align="center" class="col-xs-6">
-						<button id="share" type="button" class="btn btn-default btn-lg">Share</button>
+						<button id="share" type="button"
+						class="btn btn-default btn-lg"
+						data-toggle="modal"
+						data-target="#shareModal">Share</button>
 					</div>
 				<!--/div-->
 			<!--/div-->			
 		</div>
 	</div>
+
+	<!-- Filter Dropdown -->
+	
+
+	<!-- Filter Modal -->
+	<div id="filterModal" class="modal fade">
+	   <div class="modal-content">
+	      <div class="modal-body">
+	      	 <p>Shows images with selected tags!</p>
+		 {{#each images}}
+		 <!-- filtering indiviual tag elements need logic work -->
+	         <div class="checkbox">
+		    <label>
+		    <input type="checkbox" value="{{tags}}"
+		    data-type="{{tags}}">{{tags}}</label>
+		 </div>
+		 {{/each}}
+	      </div>
+	      <!--div align="center" class="modal-footer">
+	         <input type="submit" class="btn btn-default btn-block"
+		 value="Share" data-dismiss="modal"></input>
+	      </div-->
+	   </div>	
+	</div>  
+
+
+	<!-- Share Modal -->
+	<div id="shareModal" class="modal fade">
+	   <div class="modal-content">
+	      <div class="modal-header">
+	         <button type="button" class="close"
+		 data-dismiss="modal">x</button>
+		 <h3 class="modal-title">Share</h3>
+	      </div>
+	      <div class="modal-body">
+		 <div class="form-group">
+		    <label for="name">Name</label>
+		    <input type="text" class="form-control" id="name"
+		    placeholder="Name" name="name">
+		 </div>
+		 <div class="form-group">
+		    <label for="email">Email</label>
+		    <input type="text" class="form-control" id="email"
+		    placeholder="email@email.com" name="email">
+		 </div>
+	      </div>
+	      <div align="center" class="modal-footer">
+	         <input type="submit" class="btn btn-default btn-block"
+		 value="Share" data-dismiss="modal"></input>
+	      </div>
+	   </div>	
+	</div>
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/lightgallery.min.js"></script>
@@ -79,6 +173,7 @@
         $("#lightgallery").lightGallery(); 
     });
 	</script>
+	<script src="js/filterHelper.js"></script>
 
 	</body>
 
