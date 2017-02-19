@@ -1,8 +1,74 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Test Page</title>
+	<title>ewear</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/css/closet.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ 	<link rel="stylesheet" type="text/css" href="/css/main.css">
+ 	<link href="https://fonts.googleapis.com/css?family=Amiri:400,400i,700" rel="stylesheet">
+
 </head>
 <body>
-Begin here (or replace this with any static code already written).
+<!-- The navigation bar goes here -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-SignUp" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">EWEAR</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-SignUp">
+      <ul class="nav navbar-nav navbar-right">
+      	<li><a >Upload</a></li>
+      </ul>
+		</div>
+		</div>
+	</nav>
+
+
+<!-- The clothes contatiner -->
+	<h1 id="omg">Tops</h1> 
+	<div class="container">
+		<div class="row">
+			{{#each photos}}
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="thumbnails">
+					<img src="{{imageURL}}">
+				</div>
+				<hr>
+			</div>
+			{{/each}}
+		</div>
+
+	</div>
+
+	<h1>Bottoms</h1> 
+
+
+<!-- The liked clothes contatiner -->
+
+	<div class="container">
+		<div class="row">
+			{{#each photos}}
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="thumbnails">
+					<img src="{{imageURL}}">
+				</div>
+				<hr>
+			</div>
+			{{/each}}
+		</div>
+
+	</div>
+
+	<!-- scripts for JavaScript and Jquery -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
