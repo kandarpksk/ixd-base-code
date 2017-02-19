@@ -1,0 +1,64 @@
+body {
+	background-color: #FFF;
+	background-position: center;
+	font-family: 'Amiri', serif;
+	color: white;
+}
+
+ul {
+  margin: 30px auto;
+  text-align: center;
+}
+
+li {
+  color: #000;
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 300;
+  padding: 0 40px;
+}
+
+.Outfits {
+  background: #EEEFF1;
+  box-sizing: border-box;
+  top: 700px;
+  width: 50%;
+  margin: 20px auto;
+  padding: 5px 0px;
+  text-align: center;
+}
+
+.Outfits img{
+  position: center;
+  width: 80%;
+}
+
+#cover {
+  background: url("/images/weather/Cloudy.png") no-repeat center bottom;
+  background-size: cover;
+  height: 200px;
+  position: relative;
+  top:100px;
+}
+
+.btn {
+  background-color: #14213D;
+  color: #FFF;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.75em;
+  padding: 5%;
+}
+
+html {
+	height: 100%;
+}
+
+
+hr {
+	width: 400px;
+	border-top: 1px solid white;
+
+}
+
