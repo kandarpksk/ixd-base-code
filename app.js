@@ -11,7 +11,7 @@ var handlebars = require('express3-handlebars')
 // here is the route to the pages
 var landing = require('./routes/landing');
 var login = require('./routes/login');
-var dashbaord = require('./routes/dashbaord');
+var dashboard = require('./routes/dashboard');
 var like = require('./routes/like');
 var closet = require('./routes/closet');
 
