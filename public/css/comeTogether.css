@@ -2,20 +2,31 @@
  * CSS module used for the changing general things across the app. 
  */
 
+/* Change the bodys in all the htmls across the app */
+body {
+   /*background-color: #E9FFE6; */
+   background-color: #F0FEFF; 
+}
+
+
+
+
+
+/***** CODE FROM ORIGINAL FORK *****/
 /* applies to anything of class "example-class-selector" */
 .example-class-selector {
-	margin-top: 2em;
+    margin-top: 2em;
 }
 
 /* applies to any <p> descendants of an element of class "example-class-selector" */
 .example-class-selector p {
-	/* Colors are in hexadecimal: http://www.colorpicker.com/ */	
-	color: #CC00AA;
+    /* Colors are in hexadecimal: http://www.colorpicker.com/ */    
+    color: #CC00AA;
 }
 
 .jumbotron {
-	position: relative;
-	background: none;
+    position: relative;
+    background: none;
 }
 
 
@@ -27,23 +38,10 @@
      bottom: 0;
      right: 0;
      position: absolute;
-     z-index: -1;	
+     z-index: -1;   
 }
 
 
 .jumbotron p {
      color: #6e6e6e;
-}
-
-/* Use this to manipulate the start button */
-.start {
-     margin: auto;
-     width: %20;
-     
-}
-
-
-body {
-   /*background-color: #E9FFE6; */
-   background-color: #F0FEFF; 
 }

@@ -11,6 +11,8 @@ var index = require('./routes/index');
 var home = require('./routes/home');
 var project = require('./routes/project');
 var discover = require('./routes/discover');
+var create = require('./routes/create');
+var settings = require('./routes/settings');
 
 // Example route
 // var user = require('./routes/user');
@@ -43,6 +45,8 @@ app.get('/home', home.view);
 app.get('/project/highlights/:id', project.viewHighlights);
 app.get('/project/trending/:id', project.viewTrending);
 app.get('/discover', discover.view);
+app.get('/create', create.view);
+app.get('/settings', settings.view);
 
 // Example route
 // app.get('/users', user.list);

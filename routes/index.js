@@ -1,6 +1,6 @@
 /* 
  * Server-side JS module 
- * Currently renders the login page.
+ * Currently renders the Login page.
  */
 
 exports.view = function(req, res) {
