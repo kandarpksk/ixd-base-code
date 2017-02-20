@@ -14,6 +14,7 @@ var login = require('./routes/login');
 var dashboard = require('./routes/dashboard');
 var like = require('./routes/like');
 var closet = require('./routes/closet');
+var upload = require('./routes/upload');
 
 // Example route
 // var user = require('./routes/user');
@@ -46,6 +47,7 @@ app.get('/login', login.view);
 app.get('/dashboard', dashboard.view);
 app.get('/like', like.view);
 app.get('/closet', closet.view);
+app.get('/upload', upload.view);
 
 
 http.createServer(app).listen(app.get('port'), function(){
