@@ -58,15 +58,17 @@
 	</div>
 	{{/each}}
 	</div>
-	<p style="margin-bottom:55px;"/></p>
+
+	<!-- load footer -->
+	<div id="footer"></div>
 
 	<!-- load JS scripts -->
 	<script src="/js/jquery-3.1.1.js"></script>
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/comeTogether.js"></script>
 	<script> document.getElementById("defaultOpen").click();</script>
-	<!-- load header using script-->
+	<!-- load header and footer using scripts-->
 	<script> $(function() {$("#header").load("/header.html")} ); </script>
-
+	<script> $(function() {$("#footer").load("/footer.html")} ); </script>
 </body>
 </html>

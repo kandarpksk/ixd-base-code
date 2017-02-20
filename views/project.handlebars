@@ -13,6 +13,7 @@
 </head>
 
 <body>
+	<!-- load header -->
 	<div id="header"></div>
 
 	<div class="container">		
@@ -23,15 +24,18 @@
 			<hr>
 		</div>
 
+		<p><a href="/home">Back &raquo;</a></p>
+	</div>
 
-	<p><a href="/home">Back &raquo;</a></p>
+	<!-- load footer -->
+	<div id="footer"></div>
 
 	<!-- load JS scripts -->
 	<script src="/js/jquery-3.1.1.js"></script>
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/comeTogether.js"></script>
-	<!-- load header using script-->
+	<!-- load header and footer using scripts-->
 	<script> $(function() {$("#header").load("/header.html")} ); </script>
-
+	<script> $(function() {$("#footer").load("/footer.html")} ); </script>
 </body>
 </html>
