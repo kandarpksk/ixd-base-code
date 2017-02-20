@@ -12,7 +12,9 @@ var home = require('./routes/home');
 var project = require('./routes/project');
 var discover = require('./routes/discover');
 var create = require('./routes/create');
+var profile = require('./routes/profile');
 var settings = require('./routes/settings');
+var staticpages = require('./routes/staticpages');
 
 // Example route
 // var user = require('./routes/user');
@@ -46,7 +48,11 @@ app.get('/project/highlights/:id', project.viewHighlights);
 app.get('/project/trending/:id', project.viewTrending);
 app.get('/discover', discover.view);
 app.get('/create', create.view);
+app.get('/profile', profile.view);
 app.get('/settings', settings.view);
+app.get('/aboutus', staticpages.viewAboutUs);
+app.get('/faq', staticpages.viewFAQ);
+app.get('/contact', staticpages.viewContact);
 
 // Example route
 // app.get('/users', user.list);
