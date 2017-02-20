@@ -7,7 +7,6 @@
 // Get all of our project data
 console.log("Loading Project.js");
 var projectData = require('../projectData.json');
-console.log("Successfully loaded Project.js");
 
 exports.viewHighlights = function(req, res) {
 	console.log("Rendering Highlights");

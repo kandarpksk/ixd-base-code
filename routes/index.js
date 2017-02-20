@@ -1,14 +1,9 @@
 /* 
  * Server-side JS module 
- * Currently loads the projectData.json file into index.handlebars.
+ * Currently renders the login page.
  */
 
-// Get all of our project data
-console.log("Loading Index.js");
-var projectData = require('../projectData.json');
-console.log("Successfully loaded Index.js");
-
-exports.view = function(req, res){
-	console.log("Rendering Index");
-	res.render('index', projectData);
+exports.view = function(req, res) {
+	console.log("Going to login page");
+	res.render('index');
 };

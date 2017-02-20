@@ -1,72 +1,86 @@
 <!doctype html>
-<!-- Home Page -->
+<!-- Login Page -->
 <html>
 <head>
-	<title>Come Together</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-	<!-- import CSS modules -->
-	<link href="/css/bootstrap.css" rel="stylesheet">
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/comeTogether.css" rel="stylesheet">
-	<link href="/css/textFonts.css" rel="stylesheet">
+  <title>Come Together</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <!-- import CSS modules -->
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/comeTogether.css" rel="stylesheet">
+  <link href="/css/textFonts.css" rel="stylesheet">
+  <link href="/css/login.css" rel="stylesheet">
+  <link href="/css/navbar.css" rel="stylesheet">
 </head>
 
 <body>
-	<!-- load header -->
-	<div id="header"></div>
+  <!-- load DUMMY header -->
+  <div id="dummyHeader">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarButton">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Come Together</a>
+        </div>
+      </div>
+    </nav>
+    <p style="margin-bottom:55px;"/></p>
+  </div>
 
-	<div class="container">
-		<!-- Allow you to toggle between different content on the home screen -->
-		<ul class="tab">
-	  		<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'PastProject')" id = "defaultOpen">Past Highlights</a></li>
-	  		<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Trending')">Trending Now</a></li>
-		</ul>
-	</div>
+  <!-- Build the rest of the login page -->
+  <div class="container login-custom">
+    <div class="row">
+      <div class="main">
+        <h3>Welcome to Come Together!</h3>
+        <h3>Please Log In, or <a href="/home">Sign Up</a></h3>
 
-	<!-- Add the sample projects here -->
-	<div id="PastProject" class="tabcontent">
-	{{#each highlightProjects}}
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-7" align="right">
-					<img src="{{imageURL}}" class="img-responsive img-rounded">				
-				</div>
-				<div class="col-xs-5">
-					<h4><a href="/project/highlights/{{id}}" class="projectName">{{name}}</a></h4>
-					<p class="projectShortDesc">{{shortDescription}}</p>
-				</div>
-			</div>
-			<p style="margin-bottom:40px;"/></p>
-		</div>
-	{{/each}}
-	</div>
+        <form role="form">
+          <div class="form-group">
+            <label for="inputUsernameEmail">Username or email</label>
+            <input type="text" class="form-control" id="inputUsernameEmail">
+          </div>
+          <div class="form-group">
+            <a class="pull-right" href="#">Forgot password?</a>
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="inputPassword">
+          </div>
+          <div class="checkbox pull-right">
+            <label>
+              <input type="checkbox">
+              Remember me </label>
+          </div>
+          <button type="submit" class="btn btn btn-primary" formaction="/home">
+            Log In
+          </button>
+        </form>
 
-	<div id="Trending" class="tabcontent">
-	{{#each trendingProjects}}
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-xs-7" align="right">
-				<img src="{{imageURL}}" class="img-responsive img-rounded">				
-			</div>
-			<div class="col-xs-5">
-				<h4><a href="/project/trending/{{id}}" class="projectName">{{name}}</a></h4>
-				<p class="projectShortDesc">{{shortDescription}}</p>
-			</div>
-		</div>
-		<p style="margin-bottom:40px;"/></p>
-	</div>
-	{{/each}}
-	</div>
-	<p style="margin-bottom:55px;"/></p>
+        <div class="login-or">
+          <hr class="hr-or">
+          <span class="span-or">or</span>
+        </div>
 
-	<!-- load JS scripts -->
-	<script src="/js/jquery-3.1.1.js"></script>
-	<script src="/js/bootstrap.js"></script>
-	<script src="/js/comeTogether.js"></script>
-	<script> document.getElementById("defaultOpen").click();</script>
-	<!-- load header using script-->
-	<script> $(function() {$("#header").load("/header.html")} ); </script>
+        <div class="row">
+          <a href="/home" class="btn btn-lg btn-primary btn-block">Login with Facebook</a>
+        </div>
+        <p></p>
+        <div class="row">
+          <a href="/home" class="btn btn-lg btn-info btn-block">Login with Google+</a>
+        </div>
+      
+      </div> 
+    </div>
+  </div>
+
+  <!-- load JS scripts -->
+  <script src="/js/jquery-3.1.1.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/comeTogether.js"></script>
 
 </body>
 </html>
