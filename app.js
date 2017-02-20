@@ -10,7 +10,7 @@ var handlebars = require('express3-handlebars')
 var index = require('./routes/index');
 var home = require('./routes/home');
 var project = require('./routes/project');
-var find = require('./routes/find');
+var discover = require('./routes/discover');
 
 // Example route
 // var user = require('./routes/user');
@@ -42,7 +42,7 @@ app.get('/', index.view);
 app.get('/home', home.view);
 app.get('/project/highlights/:id', project.viewHighlights);
 app.get('/project/trending/:id', project.viewTrending);
-app.get('/find', find.view);
+app.get('/discover', discover.view);
 
 // Example route
 // app.get('/users', user.list);

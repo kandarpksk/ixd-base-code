@@ -1,4 +1,4 @@
 exports.view = function(req, res) {
 	console.log("Finding Projects");
-	res.render('find');
+	res.render('discover');
 };
