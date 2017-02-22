@@ -21,33 +21,46 @@ li {
 }
 
 .Outfits {
-  background: #EEEFF1;
   box-sizing: border-box;
-  top: 700px;
-  width: 50%;
-  margin: 20px auto;
+  width: 65%;
+  margin: 5px auto;
   padding: 5px 0px;
   text-align: center;
 }
 
-.Outfits img{
-  position: center;
-  width: 80%;
+.Outfit {
+  display: inline-block;
+  margin: 0px 2% 10px 2%;
+  text-align: center;
+  width: 60%;
+  height: auto;
+}
+
+.Outfit img{
+  width: 300px;
+}
+
+.Choice{
+  float:left;
+  height: auto;
+  font-size: 10px;
+  width:100%;
 }
 
 #cover {
   background-size: cover;
-  height: 200px;
+  height: 120px;
   position: relative;
-  top:100px;
+  top:50px;
 }
 
 .btn {
   background-color: #14213D;
   color: #FFF;
   font-family: 'Amatic SC', cursive;
-  font-size: 1.75em;
   padding: 5%;
+  position: center;
+  margin-left: 5%;
 }
 
 html {
