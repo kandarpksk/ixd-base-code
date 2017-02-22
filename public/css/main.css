@@ -36,7 +36,6 @@ li {
 }
 
 #cover {
-  background: url("/images/weather/Cloudy.png") no-repeat center bottom;
   background-size: cover;
   height: 200px;
   position: relative;
