@@ -1,4 +1,5 @@
 var closetdata = require('../closetdata.json');
+var clothes;
 var fs = require('fs')
 
 exports.view = function(req, res){
@@ -11,8 +12,9 @@ const visionClient = Vision({
 	projectId: projectId
 });
 
-closetdata.photos.forEach(function(element){ 
-	fileName = element.imageURL;
+/*
+for each(clothes in closetdata){ 
+	clothes.fileName = closetdata["imageURL"];
 	console.log(fileName);
 
 	visionClient.detectLabels(fileName)
@@ -33,4 +35,5 @@ closetdata.photos.forEach(function(element){
 	})
 
 });
+*/
 
