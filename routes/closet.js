@@ -11,12 +11,12 @@ const projectId='ewear-159500';
 const visionClient = Vision({
 	projectId: projectId
 });
-
 /*
 for each(clothes in closetdata){ 
 	clothes.fileName = closetdata["imageURL"];
 	console.log(fileName);
 
+	/*
 	visionClient.detectLabels(fileName)
 	.then((results) => {
 
@@ -33,7 +33,6 @@ for each(clothes in closetdata){
     //})
 
 	})
-
 });
 */
 

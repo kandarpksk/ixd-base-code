@@ -30,7 +30,7 @@
 		  	"label" : ["sweater"],
 		  	"color" : ["White"]
 		},
-		{
+		{ 
 			"imageURL" : "/images/TShirt.png",
 		  	"label" : ["tshirt"],
 		  	"color" : ["White"]
