@@ -1,17 +1,21 @@
 var closetdata = require('../closetdata.json');
-var clothes;
-var fs = require('fs')
+
+//var fs = require('fs')
 
 exports.view = function(req, res){
-  res.render('closet', closetdata);
+
+	res.render('closet', closetdata);
+  	
 };
 
+
+/*
 const Vision = require('@google-cloud/vision');
 const projectId='ewear-159500';
 const visionClient = Vision({
 	projectId: projectId
 });
-/*
+
 for each(clothes in closetdata){ 
 	clothes.fileName = closetdata["imageURL"];
 	console.log(fileName);
