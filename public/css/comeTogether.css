@@ -1,0 +1,76 @@
+/* 
+ * CSS module used for the changing general things across the app. 
+ */
+
+/* Change the bodys in all the htmls across the app */
+body {
+   /*background-color: #E9FFE6; */
+   background-color: #F0FEFF; 
+}
+
+/***** CODE FROM ORIGINAL FORK *****/
+/* applies to anything of class "example-class-selector" */
+.example-class-selector {
+    margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+    /* Colors are in hexadecimal: http://www.colorpicker.com/ */    
+    color: #CC00AA;
+}
+
+.jumbotron {
+    position: relative;
+    background: none;
+}
+
+
+.jumbotron:after {
+     content:"";
+     opacity: 0.35;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     position: absolute;
+     z-index: -1;   
+}
+
+
+.jumbotron p {
+     color: #6e6e6e;
+}
+#btn-back {
+    text-align: left;
+    position: center;
+}
+#btn-join {
+    position: right;
+    text-align: center;
+}
+#submit {
+  background-image: -webkit-linear-gradient(top, #5cb85c 0%, #419641 100%);
+  background-image: linear-gradient(to bottom, #5cb85c 0%, #419641 100%);
+  background-repeat: repeat-x;
+  border-color: transparent;
+  border-radius: 5px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff419641', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  color: white;
+  height: 45px;
+  width: 150px;
+}
+
+#submit:hover,
+#submit:focus {
+  background-color: #419641;
+  background-position: 10 -15px;
+
+}
+
+#submit:active,
+#submit.active {
+  background-color: #419641;
+  border-color: #3e8f3e;
+}
