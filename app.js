@@ -8,7 +8,16 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
-var index = require('./routes/index');
+// here is the route to the pages
+var landing = require('./routes/landing');
+var login = require('./routes/login');
+var dashboard = require('./routes/dashboard');
+var like = require('./routes/like');
+var closet = require('./routes/closet');
+var upload = require('./routes/upload');
+var outfit = require('./routes/outfit');
+
+
 // Example route
 // var user = require('./routes/user');
 
@@ -35,9 +44,14 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', index.view);
-// Example route
-// app.get('/users', user.list);
+app.get('/', landing.view);
+app.get('/login', login.view);
+app.get('/dashboard', dashboard.view);
+app.get('/like', like.view);
+app.get('/closet', closet.view);
+app.get('/upload', upload.view);
+app.get('/outfit', outfit.outfitInfo);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

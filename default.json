@@ -1,0 +1,39 @@
+{
+	"default": [
+		{
+			"imageURL" : "/images/Hoody.png",
+		 	"label" : [ "hoody" ],
+		  	"color" : ["White"]
+		},
+		{
+			"imageURL" : "/images/Jacket.png",
+		 	"label" : ["jacket"],
+		  	"color" : ["White"]
+		},
+		{
+			"imageURL" : "/images/Pants.png",
+		  	"label" : ["pants"],
+		  	"color" : ["White"]
+		},
+		{
+			"imageURL" : "/images/Shorts.png",
+		  	"label" : ["shorts"],
+		  	"color" : ["White"]
+		},
+		{
+			"imageURL" : "/images/Skirt.png",
+		  	"label" : ["skirt"],
+		  	"color" : ["White"]
+		},
+		{
+			"imageURL" : "/images/Sweater.png",
+		  	"label" : ["sweater"],
+		  	"color" : ["White"]
+		},
+		{ 
+			"imageURL" : "/images/TShirt.png",
+		  	"label" : ["tshirt"],
+		  	"color" : ["White"]
+		}
+	]
+}

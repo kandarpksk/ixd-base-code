@@ -1,0 +1,75 @@
+body {
+	background-color: #FFF;
+	background-position: center;
+	font-family: 'Amiri', serif;
+	color: white;
+}
+
+ul {
+  margin: 30px auto;
+  text-align: center;
+}
+
+li {
+  color: #000;
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 300;
+  padding: 0 40px;
+}
+
+.Outfits {
+  box-sizing: border-box;
+  width: 65%;
+  margin: 5px auto;
+  padding: 5px 0px;
+  text-align: center;
+}
+
+.Outfit {
+  display: inline-block;
+  margin: 0px 2% 10px 2%;
+  text-align: center;
+  width: 150px;
+  height: 220px;
+}
+
+.Outfit img{
+  width: 300px;
+}
+
+.Choice{
+  float:left;
+  height: auto;
+  width:100%;
+}
+
+#cover {
+  background-size: cover;
+  height: 120px;
+  position: relative;
+  top:50px;
+}
+
+.btn {
+  background-color: #14213D;
+  color: #FFF;
+  font-family: 'Amatic SC', cursive;
+  padding: 5%;
+  position: center;
+  margin-left: 5%;
+}
+
+html {
+	height: 100%;
+}
+
+
+hr {
+	width: 400px;
+	border-top: 1px solid white;
+
+}
+
