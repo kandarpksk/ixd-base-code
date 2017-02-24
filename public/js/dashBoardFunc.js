@@ -1,17 +1,20 @@
+'use strict';
 var indexI = 0;
 var indexJ = 0;
 
 // Call this function when page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+
 	$('.Choice button').click(clickShirt);
 	$('.Choice button').click(clickPants);
+	
 })
 
 /*
  * Function that is called when the document is ready. 
  */
- function initalizePage() {
+ function initializePage() {
  	console.log("dashBoardFunc is connected");
  }
 
