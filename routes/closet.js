@@ -1,6 +1,6 @@
 var closetdata = require('../closetdata.json');
 var clothes;
-var fs = require('fs')
+var fs = require('fs');
 
 exports.view = function(req, res){
   res.render('closet', closetdata);
@@ -11,12 +11,19 @@ const projectId='ewear-159500';
 const visionClient = Vision({
 	projectId: projectId
 });
+
+for( var i in closetdata ){
+	clothes = closetdata[i];
+	imageURL = clothes["imageURL"];
+	console.log(closetdata[0]);
+}
+
 /*
-for each(clothes in closetdata){ 
-	clothes.fileName = closetdata["imageURL"];
+for each (clothes in closetdata){ 
+	clothesImg = closetdata["imageURL"];
 	console.log(fileName);
 
-	/*
+	
 	visionClient.detectLabels(fileName)
 	.then((results) => {
 
@@ -33,6 +40,6 @@ for each(clothes in closetdata){
     //})
 
 	})
-});
+}
 */
 
