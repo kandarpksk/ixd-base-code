@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
  	<link href="https://fonts.googleapis.com/css?family=Amiri:400,400i,700" rel="stylesheet">
+ 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -40,7 +41,7 @@
 	<h1 id="omg">Tops</h1> 
 	<div class="container">
 		<div class="row">
-			{{#each photos}}
+			{{#each closetdata}}
 			<div class="col-lg-4 col-md-6 col-sm-12">
 				<div class="thumbnails">
 					<img src="{{imageURL}}">
@@ -62,7 +63,6 @@
 			{{#each photos}}
 			<div class="col-lg-4 col-md-6 col-sm-12">
 				<div class="thumbnails">
-					<img src="{{imageURL}}">
 				</div>
 				<hr>
 			</div>
@@ -70,6 +70,21 @@
 		</div>
 
 	</div>
+
+<!--upload file-->
+<<form id="upload" role="form" method="get" action="/upload">
+	
+	<p class="help-block">Choose a FILE to upload</p>
+	<input id="file" type="file">
+  	<p class="help-block">Choose a FOLDER to upload</p>
+    <input type="file" name="files[]" id="files" multiple="" directory="" webkitdirectory="" mozdirectory="">
+    <input id="folder" class="button" type="submit" value="/Upload" />
+    
+</form>
+
+
+
+
 
 	<!-- scripts for JavaScript and Jquery -->
 	<script src="/js/closetImg.js"></script>

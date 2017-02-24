@@ -4,5 +4,6 @@
  */
 
 exports.view = function(req, res){
-  res.render('upload');
+  res.render('closet');
+ 
 }

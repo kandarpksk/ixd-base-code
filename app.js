@@ -15,7 +15,8 @@ var dashboard = require('./routes/dashboard');
 var like = require('./routes/like');
 var closet = require('./routes/closet');
 var upload = require('./routes/upload');
-var outfit = require('./routes/outfit')
+var outfit = require('./routes/outfit');
+
 
 // Example route
 // var user = require('./routes/user');
