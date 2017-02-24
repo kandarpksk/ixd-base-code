@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Come Together</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- import custom CSS modules -->
+  <link href="/css/comeTogether.css" rel="stylesheet">
+  <link href="/css/textFonts.css" rel="stylesheet">
+  <link href="/css/staticpages.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- load header -->
+  <div id="header"></div>
+
+
+
+  <!-- *** ADD CODE HERE *** -->
+  <h1>FAQ</h1>
+    <div class="faq">
+      {{#each qANDa}}
+          <h4>{{question}}</h4>
+          <p>{{answer}}</p>
+          <hr>
+      {{/each}}
+    </div>
+  <!-- *** ADD CODE HERE *** -->
+
+
+
+  <!-- load footer -->
+  <div id="footer"></div>
+  
+  <!-- load JS scripts -->
+  <script src="/js/jquery-3.1.1.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/comeTogether.js"></script>
+  <!-- load header and footer using scripts-->
+  <script> $(function() {$("#header").load("/header.html")} ); </script>
+  <script> $(function() {$("#footer").load("/footer.html")} ); </script>
+</body>
+</html>

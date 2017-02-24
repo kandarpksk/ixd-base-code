@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Come Together</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- import custom CSS modules -->
+  <link href="/css/comeTogether.css" rel="stylesheet">
+  <link href="/css/textFonts.css" rel="stylesheet">
+  <link href="/css/staticpages.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- load header -->
+  <div id="header"></div>
+
+
+
+  <!-- *** ADD CODE HERE *** -->
+  <h1>About Us</h1>
+  <div class="paragraph">
+    <p>Our focus is creating an environment that cultivates community involvement and empowerment in local projects. We were amazed with the potential of crowdsourcing and how everyday people could create a product/service/mortgage that could be backed by the public and not a bank or an individual investor. We wanted to bring this idea into the world of community projects, where crowdsourcing is already the major force, but in an easier and more streamlined way that would enable more people to join and create projects.
+    </p>
+  </div>
+
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yeXpZO43tro" frameborder="0" allowfullscreen>
+    </iframe>
+  </div>
+  <hr>
+
+  <!-- *** ADD CODE HERE *** -->
+
+
+
+  <!-- load footer -->
+  <div id="footer"></div>
+  
+  <!-- load JS scripts -->
+  <script src="/js/jquery-3.1.1.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/comeTogether.js"></script>
+  <!-- load header and footer using scripts-->
+  <script> $(function() {$("#header").load("/header.html")} ); </script>
+  <script> $(function() {$("#footer").load("/footer.html")} ); </script>
+</body>
+</html>

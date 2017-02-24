@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -9,6 +8,14 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
+var home = require('./routes/home');
+var project = require('./routes/project');
+var discover = require('./routes/discover');
+var create = require('./routes/create');
+var profile = require('./routes/profile');
+var settings = require('./routes/settings');
+var staticpages = require('./routes/staticpages');
+
 // Example route
 // var user = require('./routes/user');
 
@@ -28,7 +35,7 @@ app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
-
+	
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -36,6 +43,17 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
+app.get('/home', home.view);
+app.get('/project/highlights/:id', project.viewHighlights);
+app.get('/project/trending/:id', project.viewTrending);
+app.get('/discover', discover.view);
+app.get('/create', create.view);
+app.get('/profile', profile.view);
+app.get('/settings', settings.view);
+app.get('/aboutus', staticpages.viewAboutUs);
+app.get('/faq', staticpages.viewFAQ);
+app.get('/contact', staticpages.viewContact);
+
 // Example route
 // app.get('/users', user.list);
 
