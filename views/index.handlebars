@@ -1,8 +1,203 @@
+<!doctype html>
+
 <html>
 <head>
-	<title>Test Page</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+    <title>Smart Album</title>
+
+	<link href="css/bootstrap.css" rel="stylesheet"></link>
+	<link href="css/bootstrap-theme.css" rel="stylesheet"></link>
+	<link href="css/smartalbum.css" rel="stylesheet"></link>
+	<link href="css/lightgallery.css" rel="stylesheet"></link>
 </head>
+
 <body>
-Begin here (or replace this with any static code already written).
-</body>
+	
+
+	
+	<div class="container">
+		<div class="row">
+			<div align="center" class="col-xs-4">
+
+				<button class="btn btn-default btn-lg
+				topPadding" data-toggle="modal"
+				data-target="#filterModal">Filter</button>
+		            
+			     <!-- Filter Dropdown button with checkboxes -->
+				<!--div class="button-group">
+				<div align="left" class="dropdown">
+				   <button class="btn btn-default btn-lg
+				   dropdown-toggle topPadding" type="button"
+				   data-toggle="dropdown">Filter<span
+				   class="caret"></span></button>
+				   <ul class="dropdown-menu">
+				      
+				      {{#each images}}
+				         {{#each tags}}
+				      <li><a href="#" class="small"
+				      data-value="{{this}}"><input
+				      type="checkbox">&nbsp;{{this}}</a></li>
+				         {{/each}}
+                                      {{/each}}
+				      <li><a href="#" class="small"
+				      data-value="laptop"><input
+				      type="checkbox">&nbsp;laptop</a></li>
+				      <li><a href="#" class="small"
+				      data-value="Friend: Chad"><input
+				      type="checkbox">&nbsp;Friend: Chad</a></li>
+				      <li><a href="#" class="small"
+				      data-value="Friend: John"><input
+				      type="checkbox">&nbsp;Friend: John</a></li>
+				   </ul>
+				</div>
+			     </div-->
+			     
+
+			</div>
+			<div class="col-xs-4">
+				<h2 align="center">Photos</h2>
+			</div>
+			<div align="center" class="col-xs-4">
+				<a href="upload">
+				<button type="button" class="btn btn-default btn-lg topPadding">Upload</button>
+				</a>
+			</div>
+		</div>
+	</div>	
+	
+
+	<!--<div class="container">
+		<div class="row">
+			{{#each images}}
+			<div class="col-xs-4 topPadding">
+				<img src={{imageURL}} class="img-responsive">
+			</div>
+			{{/each}}
+	    </div>
+	 </div>-->
+	 <div class="container">
+	 <div class="row" id="lightgallery">
+	 	{{#each images}}
+	 	<!--TODO: Make the caption for the tags look nicer-->
+  		<a href={{imageURL}} data-sub-html={{tags}}>
+  			<div class="col-xs-4 topPadding imagesToFilter"
+			data-type="{{tags}}">
+      		<img src={{imageURL}} class="img-responsive">
+      		</div>
+  		</a>
+	  	
+  		{{/each}}
+	</div>
+	</div>
+
+	
+	<br>
+	<div class="container">
+		<div class="row">
+			<!--div class="btn-toolbar"-->
+				<!--div class="bottomButton"-->
+					<div align="center" class="col-xs-6">	
+						<button id="voice" type="button"
+						class="btn btn-default btn-lg"
+						data-toggle="modal"
+						data-target="#voiceModal">Voice</button>
+					</div>
+					<div align="center" class="col-xs-6">
+						<button id="share" type="button"
+						class="btn btn-default btn-lg"
+						data-toggle="modal"
+						data-target="#shareModal">Share</button>
+					</div>
+				<!--/div-->
+			<!--/div-->			
+		</div>
+	</div>
+
+	<!-- Voice Modal -->
+        <div id="voiceModal" class="modal fade">
+	   <div class="modal-content">
+	      <div class="modal-body">
+	         <button type="button" class="close"
+		 data-dismiss="modal">x</button>
+	      	 <p>Press the Record button and then speak!</p>
+		 <p>Ex: Add photos with tags Andrew and John.</p>
+		 <p id="STToutput"></p>
+	      </div>
+	      <div align="center" class="modal-footer">
+	         <button id="voiceRecordBtn" type="button" class="btn
+		 btn-default">Record</button>
+		 <button id="stopRecord" type="button" class="btn
+		 btn-default">Stop</button>
+	      </div>
+	   </div>	
+	</div> 
+
+	<!-- Filter Modal -->
+	<div id="filterModal" class="modal fade">
+	   <div class="modal-content">
+	      <div class="modal-body">
+	         <button type="button" class="close"
+		 data-dismiss="modal">x</button>
+	      	 <p>Shows images with at least one of the selected tags!</p>
+		 {{#each uniqueTags}}
+		 <!-- filtering indiviual tag elements need logic work -->
+	         <div class="checkbox">
+		    <label>
+		    <input type="checkbox" value="{{this}}"
+		    data-type="{{this}}">{{this}}</label>
+		 </div>
+		 {{/each}}
+	      </div>
+	      <div align="center" class="modal-footer">
+	         <button type="button" class="btn btn-default"
+		 data-dismiss="modal">Filter</input>
+	      </div>
+	   </div>	
+	</div>  
+
+
+	<!-- Share Modal -->
+	<div id="shareModal" class="modal fade">
+	   <div class="modal-content">
+	      <div class="modal-header">
+	         <button type="button" class="close"
+		 data-dismiss="modal">x</button>
+		 <h3 class="modal-title">Share</h3>
+	      </div>
+	      <div class="modal-body">
+		 <div class="form-group">
+		    <label for="name">Name</label>
+		    <input type="text" class="form-control" id="name"
+		    placeholder="Name" name="name">
+		 </div>
+		 <div class="form-group">
+		    <label for="email">Email</label>
+		    <input type="text" class="form-control" id="email"
+		    placeholder="email@email.com" name="email">
+		 </div>
+	      </div>
+	      <div align="center" class="modal-footer">
+	         <input type="submit" class="btn btn-default btn-block"
+		 value="Share" data-dismiss="modal"></input>
+	      </div>
+	   </div>	
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/lightgallery.min.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+    });
+	</script>
+	<script src="js/filterHelper.js"></script>
+	<script src="js/speech.1.0.0.js"></script>
+	<script src="js/stt.js"></script>
+
+	</body>
+
 </html>
