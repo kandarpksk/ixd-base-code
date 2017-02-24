@@ -1,6 +1,11 @@
 var closetdata = require('../closetdata.json');
+<<<<<<< HEAD
 
 //var fs = require('fs')
+=======
+var clothes;
+var fs = require('fs')
+>>>>>>> parent of 79218ed... fix the problem with javascript linkage
 
 exports.view = function(req, res){
 
@@ -15,7 +20,11 @@ const projectId='ewear-159500';
 const visionClient = Vision({
 	projectId: projectId
 });
+<<<<<<< HEAD
 
+=======
+/*
+>>>>>>> parent of 79218ed... fix the problem with javascript linkage
 for each(clothes in closetdata){ 
 	clothes.fileName = closetdata["imageURL"];
 	console.log(fileName);
