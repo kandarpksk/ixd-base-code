@@ -73,5 +73,23 @@
 			"shortDescription": "Helping refugee children to integrate into the community better through help with language.",
 			"description": "With the ongoing refugee crisis, more and more children are dropped into an unsympathetic school system that does not care about their needs. While these children are in danger of falling behind if they cannot catch up with the curriculum, there is a way to prevent them from failing. Please consider joining a local team of community members as we help these students improve upon their language and mathematical skills so that they can stride toward a brighter future."
 		}
+	],
+
+	"qANDa": [
+		{
+			"id": "0",
+			"question": "What is Come Together?",
+			"answer": "Our focus is creating an environment that cultivates community involvement and empowerment in local projects. Our inspiration(s) were websites such as, Point, GoFundMe, Meetup, Kickstarter and Indigogo. We were amazed with the potential of crowdsourcing and how everyday people could create a product/service/mortgage that could be backed by the public and not a bank or an individual investor. We wanted to bring this idea into the world of community projects, where crowdsourcing is already the major force, but in an easier and more streamlined way that would enable more people to join and create projects."
+		},
+		{
+			"id": "1",
+			"question": "How can I find projects to join?",
+			"answer": "Our home page lets users view past highlighted projects and current trending projects. Also, check out the discover page in the menu. Find projects by searching by a zipcode. "
+		},
+		{
+			"id": "2",
+			"question": "What makes Come Together different than other meetup apps?",
+			"answer": "Come Together’s focus is for localized community projects. We want to create a platform that enables people to get to know their neighbors and bring people together for social events. The end result will better the community and foster a sense of support for one another. "
+		}
 	]
 }

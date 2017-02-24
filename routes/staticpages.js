@@ -1,4 +1,4 @@
-/* 
+-/* 
  * Server-side JS module 
  * Currently loads the projectData.json file and separately renders the Settings page.
  */
@@ -14,7 +14,7 @@ exports.viewAboutUs = function(req, res) {
 
 exports.viewFAQ = function(req, res) {
 	console.log("Exporting FAQ");
-	res.render('faq');
+	res.render('faq', projectData);
 };
 
 exports.viewContact = function(req, res) {
