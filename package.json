@@ -1,11 +1,11 @@
 {
-  "name": "IntroHCI",
-  "version": "0.0.1",
-  "author": "Intro HCI Staff",
+  "name": "IxD",
+  "version": "0.0.2",
+  "author": "Interaction design Staff",
 
   "repository": {
     "type": "git",
-    "url": "https://github.com/IntroHCI/lab4"
+    "url": "https://github.com/kandarpksk/ixd-base-code"
   },
   "license": "MIT",
 
